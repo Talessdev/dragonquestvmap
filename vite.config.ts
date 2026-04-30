@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 
 export default defineConfig({
-  // Alterado de "./" para "/" para evitar problemas de caminhos na Vercel
+  // Ajustado para '/' para garantir que os caminhos das imagens sejam lidos da raiz
   base: "/", 
   plugins: [react(), tailwindcss()],
   resolve: {
@@ -18,6 +18,5 @@ export default defineConfig({
     emptyOutDir: true,
     
     assetsInlineLimit: 0, 
-    sourcemap: false,
-  },
+  }
 });
